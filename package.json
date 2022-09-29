@@ -1,6 +1,6 @@
 {
   "name": "line-awesome",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Line Awesome by Icon8. A drop-in replacement for Font Awesome.",
   "keywords": [
     "font",
@@ -12,8 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/icons8/line-awesome.git"
+    "url": "git://github.com/Airgrup/line-awesome.git"
   },
   "license": "MIT",
-  "main": "dist/line-awesome/css/line-awesome.css"
+  "main": "dist/line-awesome/css/line-awesome.css",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "compile": "npx sass ./dist/line-awesome/scss/line-awesome.scss > ./dist/line-awesome/css/line-awesome.css",
+    "compile:min": "npx sass ./dist/line-awesome/scss/line-awesome.scss --output-style compressed > ./dist/line-awesome/css/line-awesome.min.css"
+  }
 }
